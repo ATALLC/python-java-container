@@ -94,3 +94,7 @@ fi
 
 # set permissions for any installed artifacts
 fix-permissions /opt/app-root
+
+# Install Java
+yum -y install java-1.8.0-openjdk
+
