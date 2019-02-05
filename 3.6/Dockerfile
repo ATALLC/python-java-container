@@ -43,6 +43,9 @@ RUN INSTALL_PKGS="rh-python36 rh-python36-python-devel rh-python36-python-setupt
     rpm -e --nodeps centos-logos && \
     yum -y clean all --enablerepo='*'
 
+# Install Java
+RUN yum -y install java-1.8.0-openjdk
+
 # Copy the S2I scripts from the specific language image to $STI_SCRIPTS_PATH.
 COPY ./s2i/bin/ $STI_SCRIPTS_PATH
 
